@@ -128,12 +128,28 @@
                 </div>
             </div>
 
+            <!-- Resume -->
+            <div id="resume" class="collapse">
+                <div class="card card-body bg-success text-white ">
+                    <h2>My Resume</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, modi.</p>
+                </div>
+
+                <div class="card card-body py-5">
+                    <h3>Where Have I Worked?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque similique saepe inventore
+                        rem vitae esse.
+                    </p>
+                </div>
+            </div>
+
             <!-- FOOTER -->
             <footer id="main-footer" class="p-5 bg-dark text-white">
                 <div class="row">
                     <div class="col-md-6">
                         <a href="#" class="btn btn-outline-light">
-                            <i class="fas fa-cloud"> Download Resume</i>
+                            <i class="fas fa-cloud"> Download Resume </i> <span id="year"></span>
                         </a>
                     </div>
                 </div>
@@ -157,6 +173,14 @@
             crossorigin="anonymous"
         ></script>
 
-        <script></script>
+        <script>
+            // get automatic current year for the copyright
+            $("#year").text(new Date().getFullYear());
+
+            // collapse open-hide functionality, open one, close another and so on
+            $(".port-item").click(function() {
+                $(".collapse").collapse("hide");
+            });
+        </script>
     </body>
 </html>
