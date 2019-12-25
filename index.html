@@ -16,6 +16,13 @@
             integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
             crossorigin="anonymous"
         />
+        <!-- light box -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+            integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA="
+            crossorigin="anonymous"
+        />
         <link rel="stylesheet" href="css/style.css" />
         <title>Bootstrap Theme</title>
     </head>
@@ -225,6 +232,13 @@
             crossorigin="anonymous"
         ></script>
 
+        <!-- light box js -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+            integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs="
+            crossorigin="anonymous"
+        ></script>
+
         <script>
             // get automatic current year for the copyright
             $("#year").text(new Date().getFullYear());
@@ -232,6 +246,12 @@
             // collapse open-hide functionality, open one, close another and so on
             $(".port-item").click(function() {
                 $(".collapse").collapse("hide");
+            });
+
+            //script for light box
+            $(document).on("click", '[data-toggle="lightbox"]', function(e) {
+                e.preventDefault();
+                $(this).ekkoLightbox();
             });
         </script>
     </body>
